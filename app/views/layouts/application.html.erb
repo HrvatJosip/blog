@@ -8,16 +8,27 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-<header id="main_navigation" class="clearfix">
-  <a href='#' class='name'>Josip Dorvak</a>
-  <nav>
-    <%= link_to "Articles", posts_path %>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
-<%= yield %>
+  <header id="main_navigation" class="clearfix">
+    <%= link_to "Josip Dorvak", root_path, class: "name" %>
+    <nav>
+      <%= link_to "Articles", posts_path %>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <%= yield %>
+
+  <footer id="main_footer">
+    <p class="copyright">&copy;2015 Josip Dorvak</p>
+    <nav>
+      <a href="https://twitter.com/JDorvak" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.facebook.com/josip.dorvak" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://github.com/HrvatJosip" target="_blank"><i class="fa fa-github"></i></a>
+    </nav>
+  </footer>
 
 </body>
 </html>
