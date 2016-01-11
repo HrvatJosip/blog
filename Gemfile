@@ -13,7 +13,7 @@ gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 gem 'rouge', '~> 1.10', '>= 1.10.1'
 gem 'friendly_id', '~> 5.1'
-
+gem 'will_paginate', '~> 3.1'
 
 group :development, :test do
   gem 'byebug'
