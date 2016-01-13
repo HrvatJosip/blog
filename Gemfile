@@ -15,6 +15,9 @@ gem 'rouge', '~> 1.10', '>= 1.10.1'
 gem 'friendly_id', '~> 5.1'
 gem 'will_paginate', '~> 3.1'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'devise', '~> 3.5', '>= 3.5.3'
+gem 'bcrypt-ruby', '~> 3.0.0', :require => 'bcrypt'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'byebug'
