@@ -1,12 +1,22 @@
 <h1 id="page_title">Stuff I've Written</h1>
 
 <div id="posts_wrapper" class="skinny_wrapper">
-  <% @posts.each do |post| %>
-    <div class="post">
-      <p class="date"><%= post.created_at.strftime('%A, %B %d')%></p>
-      <h2><%= link_to post.title, post %></h2>
-      <hr>
-    </div>
+  <% if @posts.empty? %>
+    <h2>Nothing to show here</h2>
+  <% else %>
+    <% @posts.each do |post| %>
+      <div class="post">
+        <p class="date"><%= post.created_at.strftime('%A, %B %d')%></p>
+        <h2><%= link_to post.title, post %></h2>
+        <hr>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% if user_signed_in? %>
+      <div id="admin_links">
+        <%= link_to "New Post", new_post_path %>
+      </div>
   <% end %>
 </div>
   <%= will_paginate @posts %>
